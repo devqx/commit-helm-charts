@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  log-generator-helm-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-04-27T10:38:30.160046+01:00"
+    description: A Helm chart for Kubernetes
+    digest: a2e24051116f559495ca16917847cb588c38a0617e14c3264ceb7a41b97529e3
+    name: log-generator-helm-chart
+    type: application
+    urls:
+    - log-generator-helm-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-04-27T10:38:30.154459+01:00"

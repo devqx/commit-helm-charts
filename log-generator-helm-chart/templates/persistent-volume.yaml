@@ -11,4 +11,4 @@ spec:
     - ReadWriteOnce
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-**::fsap-***
+    volumeHandle: {{ .Values.volumeHandle }}

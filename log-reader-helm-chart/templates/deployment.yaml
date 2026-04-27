@@ -30,4 +30,4 @@ spec:
           protocol: TCP
         volumeMounts:
           - name: {{ .Values.volumeMount.name }}
-            mountPath: {{ .Values.volumentMount.path }}
+            mountPath: {{ .Values.volumeMount.path }}

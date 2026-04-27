@@ -9,5 +9,6 @@ spec:
     storage: {{ .Values.pv.capacity.storage }}
   accessModes:
     - ReadWriteOnce
-  hostPath:
-    path: {{ .Values.volumeMount.path }}
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-**::fsap-***

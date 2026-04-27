@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.volumeMount.name }}
 
 spec:
+  storageClassName: prod-efs-storage-class
   capacity:
     storage: {{ .Values.pv.capacity.storage }}
   accessModes:

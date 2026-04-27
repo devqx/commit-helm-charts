@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.fullnameOverride}}
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+   matchLabels:
+    app: {{ .Values.fullnameOverride }}
+  replicas: {{ .Values.replicaCount | default 2 }}
+  revisionHistoryLimit: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  minReadySeconds: 60
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.fullnameOverride }}
+    spec:
+      containers:
+      - name: {{ .Values.fullnameOverride }}
+        image: {{ .Values.image.repository }}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: {{ .Values.containerPort}}
+          name: http
+          protocol: TCP

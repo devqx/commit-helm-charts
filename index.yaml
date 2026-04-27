@@ -3,7 +3,7 @@ entries:
   log-generator-helm-chart:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2026-04-27T13:41:09.81908+01:00"
+    created: "2026-04-27T15:14:39.732354+01:00"
     description: A Helm chart for log generation based on dynamic cron schedule
     digest: 74e9df4553a8eda88f7060739a6c1ff9c18ec1b949975857522739de3402a454
     name: log-generator-helm-chart
@@ -11,4 +11,13 @@ entries:
     urls:
     - log-generator-helm-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-27T13:41:09.817023+01:00"
+  log-reader-helm-chart:
+  - apiVersion: v2
+    created: "2026-04-27T15:14:39.73262+01:00"
+    description: A Helm chart for the log-reader-app
+    digest: 7f03e473437001fa300e36009903ba4053bd7f17ff10663dcde3cd59b562927c
+    name: log-reader-helm-chart
+    urls:
+    - log-reader-helm-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-04-27T15:14:39.731112+01:00"

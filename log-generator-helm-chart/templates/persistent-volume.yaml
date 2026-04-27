@@ -5,7 +5,7 @@ metadata:
 
 spec:
   capacity:
-    storage: {{ volumeMount.capacity.storage }}
+    storage: {{ .Values.volumeMount.capacity.storage }}
   accessModes:
     - ReadWriteOnce
   hostPath:

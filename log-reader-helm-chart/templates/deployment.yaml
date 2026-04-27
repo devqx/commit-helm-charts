@@ -28,3 +28,6 @@ spec:
         - containerPort: {{ .Values.containerPort}}
           name: http
           protocol: TCP
+        volumeMounts:
+          - name: {{ .Values.volumeMount.name }}
+            mountPath: {{ .Values.volumentMount.path }}

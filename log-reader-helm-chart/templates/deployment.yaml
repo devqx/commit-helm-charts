@@ -29,5 +29,12 @@ spec:
           name: http
           protocol: TCP
         volumeMounts:
-          - name: {{ .Values.volumeMount.name }}
-            mountPath: {{ .Values.volumeMount.path }}
+          - name: {{ .Values.pv.name }}
+            mountPath: {{ .Values.pv.path }}
+      volumes:
+        - name: {{ .Values.volumeMount.name }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.pvc.claimName }}
+
+
+
